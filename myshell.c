@@ -10,7 +10,7 @@ int main() {
     size_t buffer = 0;
 
     while(1){
-        printf("myshell>");
+        printf("%s >", getenv("USER"));
 
         int read_status = getline(&input, &buffer, stdin);
 
@@ -53,7 +53,6 @@ int main() {
         }
 
         int pid = fork();
-
 
         if(pid < 0){ continue; }
 
